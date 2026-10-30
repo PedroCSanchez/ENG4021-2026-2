@@ -9,6 +9,12 @@
 </head>
 
 <body>
+    <p>Bem-vindo, <strong>{{ request.user.username }}</strong>!</p>
+
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Sair</button>
+</form>
 
     <header>
         <div class="topo">
